@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
+import { Login } from 'components/Login';
+import { Background } from 'components/Background';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <Background>
+      <Login />
+    </Background>
   );
-}
+};
 
 export default App;
