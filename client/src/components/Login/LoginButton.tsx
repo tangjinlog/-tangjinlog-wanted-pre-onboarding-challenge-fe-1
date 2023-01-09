@@ -1,4 +1,6 @@
-export const LoginButton = ({ value = 'button' }) => {
+import { loginBtn } from 'types/login';
+
+export const LoginButton = ({ value }: loginBtn) => {
   return (
     <button
       css={{

@@ -1,9 +1,12 @@
 import { setState } from 'types/login';
 
-export const SignUpButton = ({ setIsUser }: setState) => {
+export const SignUpButton = ({ isUser, setIsUser, value }: setState) => {
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setIsUser(false);
+    isUser ? setIsUser(false) : setIsUser(true);
+    const target = e.currentTarget.parentNode;
+    const ta: any = target?.querySelectorAll('input');
+    const ta2 = [...ta].map((e) => (e.value = ''));
   };
 
   return (
@@ -13,9 +16,10 @@ export const SignUpButton = ({ setIsUser }: setState) => {
         bottom: '2rem',
         color: 'rgba(0,0,0,0.5)',
       }}
+      type="reset"
       onClick={clickHandler}
     >
-      Sign up
+      {value}
     </button>
   );
 };

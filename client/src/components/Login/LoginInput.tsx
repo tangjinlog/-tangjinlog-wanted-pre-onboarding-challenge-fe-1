@@ -1,3 +1,5 @@
+import { input } from 'types/login';
+
 export const LoginInput = ({ innerRef, type, placeholder }: input) => {
   return (
     <input
@@ -15,9 +17,3 @@ export const LoginInput = ({ innerRef, type, placeholder }: input) => {
     />
   );
 };
-
-interface input {
-  innerRef: React.RefObject<HTMLInputElement>;
-  type: string;
-  placeholder: string;
-}

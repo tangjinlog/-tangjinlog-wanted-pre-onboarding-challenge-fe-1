@@ -1,4 +1,6 @@
-export const LoginFormTitle = () => {
+import { loginTitle } from 'types/login';
+
+export const LoginFormTitle = ({ title }: loginTitle) => {
   return (
     <h2
       css={(theme) => ({
@@ -7,7 +9,7 @@ export const LoginFormTitle = () => {
         fontSize: theme.fontSizes.lg,
       })}
     >
-      로그인
+      {title}
     </h2>
   );
 };
