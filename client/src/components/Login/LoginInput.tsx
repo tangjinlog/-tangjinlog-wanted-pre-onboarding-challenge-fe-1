@@ -1,4 +1,4 @@
-export const LoginInput = ({ type = 'text', placeholder = 'id' }) => {
+export const LoginInput = ({ innerRef, type, placeholder }: input) => {
   return (
     <input
       css={{
@@ -7,6 +7,7 @@ export const LoginInput = ({ type = 'text', placeholder = 'id' }) => {
         padding: '6px 6px',
         margin: '0.25rem 0',
       }}
+      ref={innerRef}
       type={type}
       placeholder={placeholder}
       minLength={8}
@@ -14,3 +15,9 @@ export const LoginInput = ({ type = 'text', placeholder = 'id' }) => {
     />
   );
 };
+
+interface input {
+  innerRef: React.RefObject<HTMLInputElement>;
+  type: string;
+  placeholder: string;
+}

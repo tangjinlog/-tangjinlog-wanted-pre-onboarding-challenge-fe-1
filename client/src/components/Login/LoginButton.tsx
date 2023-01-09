@@ -1,4 +1,4 @@
-export const LoginButton = () => {
+export const LoginButton = ({ value = 'button' }) => {
   return (
     <button
       css={{
@@ -7,7 +7,7 @@ export const LoginButton = () => {
         width: '100%',
       }}
     >
-      button
+      {value}
     </button>
   );
 };
