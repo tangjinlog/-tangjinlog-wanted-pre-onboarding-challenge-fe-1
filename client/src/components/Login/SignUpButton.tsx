@@ -1,12 +1,12 @@
-import { setState } from 'types/login';
+import { setState } from '@/types/login';
 
 export const SignUpButton = ({ isUser, setIsUser, value }: setState) => {
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     isUser ? setIsUser(false) : setIsUser(true);
     const target = e.currentTarget.parentNode;
-    const ta: any = target?.querySelectorAll('input');
-    const ta2 = [...ta].map((e) => (e.value = ''));
+    const userInputs: any = target?.querySelectorAll('input');
+    [...userInputs].map((e) => (e.value = ''));
   };
 
   return (

@@ -1,11 +1,11 @@
-import { loginTitle } from 'types/login';
+import { loginTitle } from '@/types/login';
 
 export const LoginFormTitle = ({ title }: loginTitle) => {
   return (
     <h2
       css={(theme) => ({
         position: 'absolute',
-        top: '10vh',
+        top: '20%',
         fontSize: theme.fontSizes.lg,
       })}
     >

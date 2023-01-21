@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, Global } from '@emotion/react';
-import theme from 'styles/theme';
-import global from 'styles/global';
+import theme from '@/styles/theme';
+import global from '@/styles/global';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
